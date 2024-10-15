@@ -31,13 +31,6 @@ var queryjoin = from invoice in invoices
   }
  } ;
 </pre>
-<p>Para compilar y ejecutar el programa con <a href="http://www.mono-project.com/">Mono</a> se utilizan los siguientes comandos:
-<ul>
-<li><tt>mcs /t:library Invoice.cs InvoiceData.cs InvoiceDetails.cs /o:LinqSamples.dll </tt></li>
-<li><tt>mcs -r:Invoice.dll Main.cs</tt></li>
-<li><tt>mono Main.exe</tt></li>
-</ul>
-</p>
 <p>Aquí la imagen del programa en ejecución.</p>
 <div>
 <IMG src="images/fig3.png">
