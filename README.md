@@ -4,7 +4,7 @@
 <p align="justify">Desde su aparición como una extensión a la versión 3.5 de Microsoft .NET, ha sido una poderosa herramienta que unifica las técnicas de acceso a datos en un modelo orientado a objetos .NET independiente de la fuente de datos.</p>
 <p align="justify">Para ilustrar algunos ejemplos, usaré colecciones de las siguientes clases que representan la relación entre entre una factura y sus detalles como parte de una entidad factura (esto se supone en un sistema de facturación).</p>
 <div>
-<IMG src="picture_library/linq1/fig2.png">
+<IMG src="images/fig1.png">
 </div><br>
 <!--Code invoiceData-->
 <p>Bien ahora unos programas como ejemplos.</p>
@@ -40,7 +40,7 @@ var queryjoin = from invoice in invoices
 </p>
 <p>Aquí la imagen del programa en ejecución.</p>
 <div>
-<IMG src="picture_library/linq1/fig3.png">
+<IMG src="images/fig3.png">
 </div><br>
 <h1><b>El operador Let</b></h1>
 <p align="justify">
@@ -67,11 +67,11 @@ var queryLet = from invoice in invoices
 </pre>
 <p>El resultado al ejecutar este programa es el siguiente:</p>
 <div>
-<IMG src="picture_library/linq1/fig4.png">
+<IMG src="images/fig4.png">
 </div><br>
 <h1><b>El operador Where</b></h1>
 <p align="justify">Si necesitamos múltiples criterios de selección podemos agregarlos con la palabra  where justo después de los operadores let y join.</p>
 <p>El resultado al ejecutar este programa es el siguiente:</p>
 <div>
-<IMG src="picture_library/linq1/fig5.png">
+<IMG src="images/fig5.png">
 </div><br>
