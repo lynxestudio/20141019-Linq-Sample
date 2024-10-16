@@ -6,8 +6,14 @@
 <div>
 <IMG src="images/fig1.png">
 </div><br>
-<!--Code invoiceData-->
-<p>Bien ahora unos programas como ejemplos.</p>
+<p>Aquí la imagen del programa en ejecución.</p>
+<div>
+<IMG src="images/fig2.png">
+</div><br>
+<p>Aquí la imagen de los datos de ejemplo.</p>
+<div>
+<IMG src="images/fig3.png">
+</div><br>
 <h1>El operador <b>Join</b></h1>
 <p align="justify">El operador Join funciona para encontrar la intersección entre dos colecciones de datos en base a un criterio, similar al INNER JOIN de SQL.
 <p>En este programa las colecciones a unir son:</p>
@@ -15,52 +21,18 @@
 var invoices = InvoiceData.GetInvoices ();
 var details = InvoiceData.GetDetails ();
 </pre>
-<p>El código de la consulta utilizando <b>Join</b> es el siguiente:</p>
-<pre>
-var queryjoin = from invoice in invoices
-  join detail in details on invoice.InvoiceNumber equals detail.InvoiceNumber
- select new Invoice
- {
-  InvoiceNumber = invoice.InvoiceNumber,
-  Created = invoice.Created,
-  Details = new InvoiceDetails
-  {
-   InvoiceNumber = detail.InvoiceNumber,
-   ProductPrice = detail.ProductPrice,
-   Quantity = detail.Quantity
-  }
- } ;
-</pre>
-<p>Aquí la imagen del programa en ejecución.</p>
+<p>Aquí la imagen utilizando Join.</p>
 <div>
-<IMG src="images/fig3.png">
+<IMG src="images/fig4.png">
 </div><br>
 <h1><b>El operador Let</b></h1>
 <p align="justify">
 Este operador permite calcular valores cuando se trabaja con múltiples colecciones de datos, en este ejemplo asignamos el valor de la propiedad <i>Subtotal</i> en la clase <i>Invoice</i>.</p>
 <!-- Code Let -->
 <p>La consulta utilizando <b>Let</b> queda de la siguiente manera:</p>
-<pre>
-var queryLet = from invoice in invoices
- join detail in details on
- invoice.InvoiceNumber equals detail.InvoiceNumber
- let subtotal = detail.ProductPrice * detail.Quantity
- select new Invoice
- {
-  InvoiceNumber = invoice.InvoiceNumber,
-  Created = invoice.Created,
-  Details = new InvoiceDetails
-  {
-   InvoiceNumber = detail.InvoiceNumber,
-   ProductPrice = detail.ProductPrice,
-   Quantity = detail.Quantity
-  } ,
-  Subtotal = subtotal
- } ;
-</pre>
 <p>El resultado al ejecutar este programa es el siguiente:</p>
 <div>
-<IMG src="images/fig4.png">
+<IMG src="images/fig6.png">
 </div><br>
 <h1><b>El operador Where</b></h1>
 <p align="justify">Si necesitamos múltiples criterios de selección podemos agregarlos con la palabra  where justo después de los operadores let y join.</p>
